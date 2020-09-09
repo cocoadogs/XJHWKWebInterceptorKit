@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'XJHWKWebInterceptorKit_Example' do
+  pod 'XJHWKWebInterceptorKit', :path => '../'
+
+  target 'XJHWKWebInterceptorKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
