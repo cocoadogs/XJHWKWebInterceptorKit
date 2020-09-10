@@ -58,7 +58,7 @@ typedef BOOL (^HTTPDNSCookieFilter)(NSHTTPCookie *, NSURL *);
 
 #pragma mark - WKURLSchemeHandler Methods
 
-- (void)webView:(WKWebView *)webView startURLSchemeTask:(id <WKURLSchemeTask>)urlSchemeTask {
+- (void)webView:(WKWebView *)webView startURLSchemeTask:(id <WKURLSchemeTask>)urlSchemeTask  API_AVAILABLE(ios(11.0)){
     NSURLRequest *request = [urlSchemeTask request];
 //    NSMutableURLRequest *mutaRequest = [request mutableCopy];
 //    [mutaRequest setValue:[self getRequestCookieHeaderForURL:request.URL] forHTTPHeaderField:@"Cookie"];
@@ -112,7 +112,7 @@ typedef BOOL (^HTTPDNSCookieFilter)(NSHTTPCookie *, NSURL *);
     }
 }
 
-- (void)webView:(WKWebView *)webView stopURLSchemeTask:(id <WKURLSchemeTask>)urlSchemeTask {
+- (void)webView:(WKWebView *)webView stopURLSchemeTask:(id <WKURLSchemeTask>)urlSchemeTask  API_AVAILABLE(ios(11.0)){
     dispatch_async(self.queue, ^{
         urlSchemeTask.request.stop = YES;
     });
@@ -192,8 +192,10 @@ typedef BOOL (^HTTPDNSCookieFilter)(NSHTTPCookie *, NSURL *);
 - (void)xjhRegisterURLProtocol:(Class)protocolClass {
     XJHWKURLHandler *handler = [XJHWKURLHandler sharedInstance];
     handler.protocolClass = protocolClass;
-    [self setURLSchemeHandler:handler forURLScheme:@"https"];
-    [self setURLSchemeHandler:handler forURLScheme:@"http"];
+    if (@available(iOS 11.0, *)) {
+        [self setURLSchemeHandler:handler forURLScheme:@"https"];
+        [self setURLSchemeHandler:handler forURLScheme:@"http"];
+    }
 }
 
 @end
