@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'XJHWKWebInterceptorKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of XJHWKWebInterceptorKit.'
+  s.summary          = 'XJHWKWebInterceptorKit is a WKWebView URLProtocol Interceptor Kit.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'XJHWKWebInterceptorKit is a WKWebView URLProtocol Interceptor Kit.@XJHWKWebInterceptorKit'
 
   s.homepage         = 'https://github.com/cocoadogs/XJHWKWebInterceptorKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,9 +26,39 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/cocoadogs/XJHWKWebInterceptorKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
-  s.source_files = 'XJHWKWebInterceptorKit/Classes/**/*'
+  s.public_header_files = 'XJHWKWebInterceptorKit/XJHWKWebInterceptorKit.h'
+  s.source_files = 'XJHWKWebInterceptorKit/XJHWKWebInterceptorKit.h'
+  
+  s.subspec 'DataSource' do |ss|
+    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKWebDataSource.h'
+    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKWebDataSource.{h,m}'
+  end
+  
+  s.subspec 'Base' do |ss|
+    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKURL.h'
+    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKURL.{h,m}','XJHWKWebInterceptorKit/XJHWKURLProtocol.{h,m}'
+    ss.dependency 'XJHWKWebInterceptorKit/DataSource'
+  end
+  
+  s.subspec 'ViewModel' do |ss|
+    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKRequestResponseViewModel.h'
+    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKRequestResponseViewModel.{h,m}'
+    ss.dependency 'XJHWKWebInterceptorKit/DataSource'
+  end
+  
+  s.subspec 'Controller' do |ss|
+    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKInterceptorViewController.h'
+    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKInterceptorViewController.{h,m}'
+    ss.dependency 'XJHWKWebInterceptorKit/ViewModel'
+  end
+  
+  s.dependency 'XJHNetworkInterceptorKit/Util'
+  s.dependency 'XJHNetworkInterceptorKit/Model'
+  s.dependency 'XJHNetworkInterceptorKit/ViewModel'
+  s.dependency 'XJHNetworkInterceptorKit/Cell'
+  s.dependency 'XJHNetworkInterceptorKit/Controller'
   
   # s.resource_bundles = {
   #   'XJHWKWebInterceptorKit' => ['XJHWKWebInterceptorKit/Assets/*.png']
