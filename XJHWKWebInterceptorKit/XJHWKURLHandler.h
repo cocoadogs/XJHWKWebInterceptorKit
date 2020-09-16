@@ -1,5 +1,5 @@
 //
-//  XJHWKURLProtocol.h
+//  XJHWKURLHandler.h
 //  XJHWKWebInterceptorKit
 //
 //  Created by cocoadogs on 2020/9/14.
@@ -9,8 +9,9 @@
 #import <WebKit/WebKit.h>
 
 API_AVAILABLE(ios(11.0))
-@interface XJHWKURLProtocol : NSURLProtocol
+@interface XJHWKURLHandler : NSObject<WKURLSchemeHandler>
 
-@property (nonatomic, strong) id<WKURLSchemeTask> urlSchemeTask;
++ (instancetype)sharedInstance;
 
 @end
+

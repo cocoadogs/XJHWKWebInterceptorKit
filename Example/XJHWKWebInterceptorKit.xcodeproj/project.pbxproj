@@ -20,6 +20,11 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6B12695E250EF103007264E7 /* XJHWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B12695D250EF103007264E7 /* XJHWKWebViewController.m */; };
+		6B126961250F0611007264E7 /* XJHWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B126960250F0611007264E7 /* XJHWeakScriptMessageDelegate.m */; };
+		6B126964250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B126963250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.m */; };
+		6B126967250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B126966250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.m */; };
+		6BA7003725108F0B007FA47B /* XJHTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA7003625108F0B007FA47B /* XJHTextFieldViewController.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7C1EDCEE3E5CE52941A22F57 /* Pods_XJHWKWebInterceptorKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D45BA0B8D944862B616F04 /* Pods_XJHWKWebInterceptorKit_Tests.framework */; };
 		E23B0967D9E7B79FD3A70BB9 /* Pods_XJHWKWebInterceptorKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC637700DFFED22ACF4A0BD /* Pods_XJHWKWebInterceptorKit_Example.framework */; };
@@ -58,6 +63,16 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6B12695C250EF103007264E7 /* XJHWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHWKWebViewController.h; sourceTree = "<group>"; };
+		6B12695D250EF103007264E7 /* XJHWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHWKWebViewController.m; sourceTree = "<group>"; };
+		6B12695F250F0611007264E7 /* XJHWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		6B126960250F0611007264E7 /* XJHWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		6B126962250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XJHWKWebViewController+ScriptMessageHandler.h"; sourceTree = "<group>"; };
+		6B126963250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XJHWKWebViewController+ScriptMessageHandler.m"; sourceTree = "<group>"; };
+		6B126965250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XJHWKWebViewController+NavigationDelegate.h"; sourceTree = "<group>"; };
+		6B126966250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XJHWKWebViewController+NavigationDelegate.m"; sourceTree = "<group>"; };
+		6BA7003525108F0B007FA47B /* XJHTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHTextFieldViewController.h; sourceTree = "<group>"; };
+		6BA7003625108F0B007FA47B /* XJHTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHTextFieldViewController.m; sourceTree = "<group>"; };
 		7083F3F67A56650E05F0FD7E /* Pods-XJHWKWebInterceptorKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJHWKWebInterceptorKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-XJHWKWebInterceptorKit_Example/Pods-XJHWKWebInterceptorKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76CCAC469B6F9EE9ED84D651 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -148,6 +163,16 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6B12695C250EF103007264E7 /* XJHWKWebViewController.h */,
+				6B12695D250EF103007264E7 /* XJHWKWebViewController.m */,
+				6B12695F250F0611007264E7 /* XJHWeakScriptMessageDelegate.h */,
+				6B126960250F0611007264E7 /* XJHWeakScriptMessageDelegate.m */,
+				6B126962250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.h */,
+				6B126963250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.m */,
+				6B126965250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.h */,
+				6B126966250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.m */,
+				6BA7003525108F0B007FA47B /* XJHTextFieldViewController.h */,
+				6BA7003625108F0B007FA47B /* XJHTextFieldViewController.m */,
 			);
 			name = "Example for XJHWKWebInterceptorKit";
 			path = XJHWKWebInterceptorKit;
@@ -320,15 +345,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XJHWKWebInterceptorKit_Example/Pods-XJHWKWebInterceptorKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/XJHNetworkInterceptorKit/XJHNetworkInterceptorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XJHViewState/XJHViewState.framework",
 				"${BUILT_PRODUCTS_DIR}/XJHWKWebInterceptorKit/XJHWKWebInterceptorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJHNetworkInterceptorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJHViewState.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XJHWKWebInterceptorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,9 +395,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B126964250F0659007264E7 /* XJHWKWebViewController+ScriptMessageHandler.m in Sources */,
+				6BA7003725108F0B007FA47B /* XJHTextFieldViewController.m in Sources */,
+				6B12695E250EF103007264E7 /* XJHWKWebViewController.m in Sources */,
+				6B126967250F077F007264E7 /* XJHWKWebViewController+NavigationDelegate.m in Sources */,
 				6003F59E195388D20070C39A /* XJHAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* XJHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6B126961250F0611007264E7 /* XJHWeakScriptMessageDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

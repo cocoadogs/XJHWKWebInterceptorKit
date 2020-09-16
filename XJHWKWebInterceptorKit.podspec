@@ -37,8 +37,8 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Base' do |ss|
-    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKURL.h'
-    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKURL.{h,m}','XJHWKWebInterceptorKit/XJHWKURLProtocol.{h,m}'
+    ss.public_header_files = 'XJHWKWebInterceptorKit/XJHWKURLHandler.h'
+    ss.source_files = 'XJHWKWebInterceptorKit/XJHWKURLHandler.{h,m}','XJHWKWebInterceptorKit/XJHWKURLProtocol.{h,m}'
     ss.dependency 'XJHWKWebInterceptorKit/DataSource'
   end
   
